@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Estoentities{% endblock %}
+
+{% block content %}
+    <div class="flex flex-flow flex-wrap flex-col items-center justify-center h-screen">
+        <div class="flex flex-row flex-wrap h-full w-1/2 bg-[#11101f] overflow-scroll">
+            <div class="flex flex-col flex-wrap bg-[#11101f] p-4 text-[#62a9b9] gutter">
+                <span>1</span>
+            </div>
+            <textarea class="leading-6 p-[1rem] flex-1 shadow-lg shadow-[rgba(0,0,0,0.5)] resize-none placeholder:italic text-white placeholder:text-gray-400 font-mono bg-[#1a1930] w-full overflow-y-hidden focus:outline-none" rows="1" name="code" id="editor" spellcheck="false" placeholder="Code goes here..."></textarea>
+        </div>
+        <div class="flex flex-row flex-wrap h-full w-1/2 bg-[#11101f] overflow-scroll">
+            <div class="flex flex-col flex-wrap bg-[#11101f] p-4 text-[#62a9b9] gutter">
+                <span>1</span>
+            </div>
+            <textarea class="leading-6 p-[1rem] flex-1 shadow-lg shadow-[rgba(0,0,0,0.5)] resize-none text-gray-400 placeholder:italic placeholder:text-gray-400 font-mono bg-[#1a1930] w-full overflow-y-hidden focus:outline-none" rows="1" name="output" id="output" placeholder="Output..." spellcheck="false" readonly></textarea>
+        </div>
+    </div>
+{% endblock %}
