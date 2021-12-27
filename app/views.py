@@ -48,5 +48,3 @@ def update(data):
             output += char
 
     emit('updated', {'output': output})
-
-socketio.run(app, log_output=True)
