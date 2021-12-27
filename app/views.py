@@ -40,7 +40,7 @@ def index():
 @socketio.on('update')
 def update(data):
     output = ""
-    
+
     for char in str(data['text']):
         if char in es_chars:
             output += es_chars[char]
@@ -49,4 +49,4 @@ def update(data):
 
     emit('updated', {'output': output})
 
-socketio.run(app, host='localhost', port=8080, log_output=True)
+socketio.run(app, log_output=True)
