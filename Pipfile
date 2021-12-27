@@ -8,6 +8,8 @@ flask = "*"
 gunicorn = "*"
 flask-socketio = "*"
 gevent = "*"
+eventlet = "*"
+gevent-websocket = "*"
 
 [dev-packages]
 
