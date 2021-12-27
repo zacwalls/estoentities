@@ -3,18 +3,22 @@
 {% block title %}Estoentities{% endblock %}
 
 {% block content %}
+    <div class="fixed top-0 opacity-0 left-[47.5%] bg-green-100 border-t border-b border-green-500 text-green-700 text-center px-4 py-3" id="copy-alert">
+        <p class="font-bold">Text copied!</p>
+    </div>
     <div class="flex flex-flow flex-wrap flex-col items-center justify-center h-screen">
         <div class="flex flex-row flex-wrap h-full w-1/2 bg-[#11101f] overflow-scroll">
             <div class="flex flex-col flex-wrap bg-[#11101f] p-4 text-[#62a9b9] gutter">
                 <span>1</span>
             </div>
-            <textarea class="leading-6 p-[1rem] flex-1 shadow-lg shadow-[rgba(0,0,0,0.5)] resize-none placeholder:italic text-white placeholder:text-gray-400 font-mono bg-[#1a1930] w-full overflow-y-hidden focus:outline-none" rows="1" name="code" id="editor" spellcheck="false" placeholder="Code goes here..."></textarea>
+            <textarea class="leading-6 p-[1rem] flex-1 shadow-lg shadow-[rgba(0,0,0,0.5)] resize-none placeholder:italic overflow-y-hidden text-white placeholder:text-gray-400 font-mono bg-[#1a1930] w-full focus:outline-none" rows="1" name="code" id="editor" wrap="off" spellcheck="false" placeholder="Code goes here..."></textarea>
         </div>
         <div class="flex flex-row flex-wrap h-full w-1/2 bg-[#11101f] overflow-scroll">
             <div class="flex flex-col flex-wrap bg-[#11101f] p-4 text-[#62a9b9] gutter">
                 <span>1</span>
             </div>
-            <textarea class="leading-6 p-[1rem] flex-1 shadow-lg shadow-[rgba(0,0,0,0.5)] resize-none text-gray-400 placeholder:italic placeholder:text-gray-400 font-mono bg-[#1a1930] w-full overflow-y-hidden focus:outline-none" rows="1" name="output" id="output" placeholder="Output..." spellcheck="false" readonly></textarea>
+            <textarea class="leading-6 p-[1rem] flex-1 shadow-lg shadow-[rgba(0,0,0,0.5)] resize-none text-gray-400 placeholder:italic overflow-y-hidden placeholder:text-gray-400 font-mono bg-[#1a1930] w-full focus:outline-none" rows="1" name="output" id="output" wrap="off" spellcheck="false" placeholder="Output..."  readonly></textarea>
+            <input type="button" id="copy" class="fixed top-[90%] right-10 outline-0 border-0 cursor-pointer bg-transparent hover:border-blue-700 hover:text-blue-600 py-4 px-8 text-base font-semibold text-gray-400 border border-gray-400" value="Copy to Clipboard">
         </div>
     </div>
 {% endblock %}
